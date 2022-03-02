@@ -13,8 +13,10 @@ spec:
       labels:
         app: nginx
     spec:
+      imagePullSecrets:
+        - name: dockerpullsecret
       containers:
       - name: nginx
-        image: nginx:1.6
+        image: 100.125.7.25:20202/tseye-docker-registry/nginx:latest
         ports:
         - containerPort: 80
